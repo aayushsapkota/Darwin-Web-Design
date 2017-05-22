@@ -2,12 +2,12 @@
 
 .Header_topNav{
     padding-top: 15px;
+    padding-bottom: 15px;
     background-color: #FF6914;
-    height: 130px;
     font-size: 16px;
     
 }
-.Header_topNav,
+
 .Header_pageHeadings{
     padding-left: 10%;
     padding-right: 10%;
@@ -19,14 +19,13 @@
 .breakoutNavList{
    text-align: right;
     margin: 0px;
-    overflow: hidden;
     
 }
 
 .Nav_wrapperlist li,
 .breakoutNavList li{
     list-style-type: none;
-    display: inline-flex;
+    display: block;
   
    
 }
@@ -39,9 +38,13 @@
      display: block;
     font-weight: lighter;
 }
+
 .Nav_wrapperlist li a{
     color: white;
-    
+    font-size: 15px;
+}
+.Nav_wrapperlist li a:hover{
+    color: #343434;
 }
 
 .Nav_wrapperlist li:nth-child(5){
@@ -60,43 +63,52 @@
   stroke: currentColor;
     padding-right: 10px;
 }
-.breakoutNavList li a{
-    color: black;
-    font-size: 20px;
+.Header_FloatingNav{
+    background-color: white;
+    left: 15px;
+    overflow: hidden;
 }
 
-.Header_FloatingNav img, .breakoutNavList {
-     position: relative;
-    top: 50%;
-     transform: translateY(-50%);
-}
-.Header_FloatingNav img{
+.Header_FloatingNav figure{
+    width: 20%;
+    margin: 0px;
+    display: block;
+    padding-top: 30px;
     float: left;
-   padding-left: 40px;
+    box-sizing: border-box;
 }
+
+.Header_FloatingNav img{
+   width: 110px;
+    height: auto;
+   padding-left: 40px;
+    
+}
+.breakoutNavList li a{
+    color: black;
+    font-size: 17px;
+    
+}
+.breakoutNavList li a:hover{
+    color: #FF6914;
+}
+
 .breakoutNavList{
-    float:right;
-    padding-right: 20px;
+    float: right;
+    padding-right: 5%;
+    box-sizing: border-box;
+    width: 75%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .Header_topNav,
 .Header_pageHeadings {
     box-sizing: border-box;
 }
-.Header_FloatingNav{
-   margin-left: 9%;
-    z-index: 10;
-    left: 0;
-    top: 50px;
-    position: absolute;
-    background-color: white;
-    width: 77.5%;
-    height: 160px;
-    border-radius: 2px;
-    left: 15px;
-}
+
 
 .Header_pageHeadings{
-    padding-top: 100px;
+    padding-top: 20px;
     background-color: #343434;
       overflow: hidden;
 }
@@ -110,8 +122,6 @@
     color: white;
     font-weight: 300;
     margin-top:  0px;
-    width: calc(97% - 250px);
-    float: left;
     font-style: italic;
 }
 h1{
@@ -122,6 +132,7 @@ h1{
 .HeadingButton button{
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 40px;
     
 }
 
@@ -143,3 +154,81 @@ Button:active{
     background-color:green;
 }
 
+
+@media screen and (min-width: 400px){
+   .Nav_wrapperlist li
+    {
+    display: inline-flex;
+    } 
+    .Header_FloatingNav img{
+   width: 120px;
+    height: auto; 
+}
+    
+}
+@media screen and (min-width: 700px){
+    .Header_topNav{
+       padding-left: 10%;
+    padding-right: 10%;  
+    }
+    .Header_FloatingNav figure{
+        padding-top: 20px;
+    }
+    .Header_FloatingNav img{
+   width: 130px;
+    height: auto;
+}
+   
+}
+
+@media screen and (min-width: 770px){
+    .breakoutNavList li{
+        display: inline-flex;
+        
+    }
+    .Header_pageHeadings h1{
+          width: calc(97% - 250px);
+        float: left;
+    }
+    .Header_FloatingNav img{
+   width: 150px;
+    height: auto;
+
+}
+    .breakoutNavList {
+     position: relative;
+    top: 50%;
+     transform: translateY(+50%);
+}
+}
+
+@media screen and (min-width: 1020px){
+    .Header_FloatingNav{
+   margin-left: 9%;
+    z-index: 10;
+    left: 0;
+    top: 50px;
+    position: absolute;
+    width: 77.5%;
+    border-radius: 2px;  
+       
+}
+    .breakoutNavList{
+        padding-right: 20px;
+    }
+    .breakoutNavList li a{
+        font-size: 20px;
+    }
+    
+
+    .Header_topNav{
+    padding-top: 15px;
+    height: 130px;
+    font-size: 16px;
+    } 
+    
+    .Header_pageHeadings{
+        padding-top: 100px;
+    }
+    
+}
